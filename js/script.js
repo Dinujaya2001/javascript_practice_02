@@ -1,3 +1,6 @@
+
+studentList = [];
+
 function registration(){
     let firstName = document.getElementById("firstName").value;
     let lastName = document.getElementById("lastName").value;
@@ -12,11 +15,16 @@ function registration(){
         return;
     }
      
-    console.log(firstName);
-    console.log(lastName);
-    console.log(selectGender);
-    console.log(email);
-    console.log(password);
-    console.log(number);
-    
+    student ={
+        firstName : firstName,
+        lastName : lastName,
+        selectGender : selectGender,
+        email : email,
+        password : password,
+        number : number
+    }
+
+    studentList.push(student);
+    console.log(studentList);
+
 }
