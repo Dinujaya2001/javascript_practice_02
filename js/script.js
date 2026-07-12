@@ -25,6 +25,26 @@ function registration(){
     }
 
     studentList.push(student);
+    loadTableStudentDetails();
     console.log(studentList);
 
+}
+
+function loadTableStudentDetails(){
+   let tableBody = document.getElementById("tableBody");
+
+   let body = "";
+
+   for(let i = 0 ; i < studentList.length ; i++){
+    body += `<tr>
+      <th scope="col">${studentList[i].firstName}</th>
+      <th scope="col">${studentList[i].lastName}</th>
+      <th scope="col">${studentList[i].selectGender}</th>
+      <th scope="col">${studentList[i].email}</th>
+      <th scope="col">${studentList[i].password}</th>
+      <th scope="col">${studentList[i].number}</th>
+    </tr>`;
+   }
+
+   tableBody.innerHTML = body;
 }
