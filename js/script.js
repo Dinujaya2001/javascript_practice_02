@@ -28,6 +28,18 @@ function registration(){
     loadTableStudentDetails();
     console.log(studentList);
 
+    document.getElementById("firstName").value = "";
+    document.getElementById("lastName").value = "";
+    document.getElementById("email").value = "";
+    document.getElementById("password").value = "";
+    document.getElementById("number").value = "";
+
+   
+    selectGender.checked = false;
+
+
+    alert("Registration Successful!");
+
 }
 
 function loadTableStudentDetails(){
